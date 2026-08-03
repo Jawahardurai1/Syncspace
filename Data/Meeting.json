@@ -1,0 +1,76 @@
+
+{"Meeting":[
+  {
+    "id": 1,
+    "title": "Sprint Planning",
+    "organizer": "John Smith",
+    "room": "Conference Room A",
+    "date": "2026-08-03",
+    "startTime": "09:30 AM",
+    "endTime": "10:30 AM",
+    "duration": "1h",
+    "attendees": 8,
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "title": "Client Demo",
+    "organizer": "Emily Davis",
+    "room": "Meeting Room 2",
+    "date": "2026-08-03",
+    "startTime": "11:00 AM",
+    "endTime": "12:00 PM",
+    "duration": "1h",
+    "attendees": 6,
+    "status": "Ongoing"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Review",
+    "organizer": "Sophia Wilson",
+    "room": "Creative Hub",
+    "date": "2026-08-03",
+    "startTime": "01:30 PM",
+    "endTime": "02:30 PM",
+    "duration": "1h",
+    "attendees": 5,
+    "status": "Upcoming"
+  },
+  {
+    "id": 4,
+    "title": "Project Kickoff",
+    "organizer": "Michael Brown",
+    "room": "Conference Room B",
+    "date": "2026-08-03",
+    "startTime": "03:00 PM",
+    "endTime": "04:30 PM",
+    "duration": "1h 30m",
+    "attendees": 12,
+    "status": "Upcoming"
+  },
+  {
+    "id": 5,
+    "title": "Engineering Sync",
+    "organizer": "David Johnson",
+    "room": "Meeting Room 1",
+    "date": "2026-08-03",
+    "startTime": "05:00 PM",
+    "endTime": "05:45 PM",
+    "duration": "45m",
+    "attendees": 7,
+    "status": "Upcoming"
+  },
+  {
+    "id": 6,
+    "title": "Weekly Team Standup",
+    "organizer": "Olivia Taylor",
+    "room": "Board Room",
+    "date": "2026-08-04",
+    "startTime": "09:00 AM",
+    "endTime": "09:30 AM",
+    "duration": "30m",
+    "attendees": 10,
+    "status": "Scheduled"
+  }
+]
+}
