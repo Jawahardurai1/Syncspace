@@ -1,9 +1,10 @@
 import { useState } from "react";
 import BgImage from "../assets/LoginBg.png";
-
+import {useNavigate} from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const navigate = useNavigate();
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -13,6 +14,8 @@ function Login() {
       password,
     });
 
+    // Navigate to the dashboard after successful login
+    navigate("/dashboard");
 
   }
 
