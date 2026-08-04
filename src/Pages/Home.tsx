@@ -8,16 +8,13 @@ return(
     <>
     <div className=" min-h-screen bg-gray-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] items-center gap-10 px-8 lg:px-20">
-
-  <div className="space-y-6">
-
-    <h1 className="text-5xl font-bold leading-tight text-slate-900">
+      <div className="space-y-6">
+        <h1 className="text-5xl font-bold leading-tight text-slate-900">
       Book. Manage. 
       <span className="text-blue-600"> Collaborate</span>
       <br />
       Seamlessly.
     </h1>
-
     <p className="text-lg text-slate-600 max-w-xl leading-relaxed">
       SyncSpace helps teams find, reserve, and manage meeting spaces 
       effortlessly. Experience smarter workspace scheduling with real-time 
@@ -54,8 +51,6 @@ return(
           Daily Bookings
         </p>
       </div>
-
-
       <div>
         <h3 className="text-3xl font-bold text-slate-900">
           99%
@@ -71,9 +66,7 @@ return(
 
 
   <div className="relative mt-8 lg:mt-0">
-
-    <div className="absolute -inset-3 bg-blue-100 rounded-3xl blur-2xl opacity-40"></div>
-
+    <div className="absolute inset-3 bg-blue-100 rounded-3xl  opacity-40"></div>
     <img
       src={HomeImage}
       alt="Modern Meeting Room"

@@ -9,7 +9,7 @@ function Header()
   const navigate = useNavigate();
  
   
-  const [SidebarOpen, setSidebarOpen] = useState(false);
+  const [SidebarOpen, setSidebarOpen] = useState<boolean>(false);
 return(
     <>
      <div className=" sticky top-0 z-50 flex h-[72px] w-full items-center bg-blue-500">
