@@ -4,9 +4,11 @@ import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import UseFetch from "../Hooks/UseFetch";
+import BookWorkspace from "../Pages/BookWorkspace";
 function Header()
 {
   const navigate = useNavigate();
+ 
   const [VisibleCount, setVisibleCount] = useState(3);
   const [SidebarOpen, setSidebarOpen] = useState(false);
 return(
@@ -20,9 +22,10 @@ return(
 
           <div className="ml-auto mr-10 flex items-center gap-8">
             <Bell size={24} className="text-white cursor-pointer hover:scale-105 transition-all duration 300" />
-            <button className="bg-[#3B82F6] text-white px-5 py-2 rounded-lg font-medium bg-blue-600 hover:scale-105 transition-all duration 300 hover:bg-blue-700 cursor-pointer">Book Workspace</button>
+            <button className="bg-[#3B82F6] text-white px-5 py-2 rounded-lg font-medium bg-blue-600 hover:scale-105 transition-all duration 300 hover:bg-blue-700 cursor-pointer"onClick={() => navigate("/BookWorkspace")}>Book Workspace</button>
             <CircleUserRound size={30} onClick={() => setSidebarOpen(!SidebarOpen)} className="text-white cursor-pointer hover:scale-105 transition-all duration 300" />
           </div>
+        
           {SidebarOpen && (
             <div className="absolute top-[72px] right-0 min-h-screen w-74 bg-white shadow-lg rounded-lg p-4 z-50 mt-2">
               <div className="flex justify-between  mb-2">

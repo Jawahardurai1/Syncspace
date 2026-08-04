@@ -7,6 +7,7 @@ function Dashboard() {
 
   const { data, error, loading } = UseFetch("http://localhost:3000/Meeting");
   const [VisibleCount, setVisibleCount] = useState(3);
+  const [showBooking, setShowBooking] = useState(false);
   const [SidebarOpen, setSidebarOpen] = useState(false);
   interface Meeting {
     id: number;
