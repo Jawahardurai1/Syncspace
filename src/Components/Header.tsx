@@ -35,7 +35,7 @@ return(
               <div className="flex flex-col gap-2 p-4">
 
                 <h3 className="px-4 py-3 rounded-lg text-slate-700 font-medium cursor-pointer 
-                 hover:bg-blue-50 hover:text-blue-600 transition">
+                 hover:bg-blue-50 hover:text-blue-600 transition " onClick={()=>navigate("/Home")}>
                   Home
                 </h3>
 
