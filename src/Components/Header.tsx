@@ -1,15 +1,14 @@
 
-import { Building2, CheckCircle2, CalendarClock, Bell, MoveUpRight, Sparkles, CircleUserRound, X } from "lucide-react";
+import {  Bell, CircleUserRound, X } from "lucide-react";
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import UseFetch from "../Hooks/UseFetch";
-import BookWorkspace from "../Pages/BookWorkspace";
+
 function Header()
 {
   const navigate = useNavigate();
  
-  const [VisibleCount, setVisibleCount] = useState(3);
+  
   const [SidebarOpen, setSidebarOpen] = useState(false);
 return(
     <>

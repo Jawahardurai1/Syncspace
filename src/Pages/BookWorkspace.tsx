@@ -1,7 +1,10 @@
+import { X } from "lucide-react";
+import {useNavigate} from "react-router-dom";
 function BookWorkspace()
 {
 const today = new Date().toISOString().split("T")[0];
 const now = new Date();
+const navigate = useNavigate();
 const currentTime = now.toTimeString().slice(0,5);
 return(
     <>
@@ -9,7 +12,13 @@ return(
         <div className="w-full max-w-3xl rounded-2xl bg-white p-10 shadow-2xl">
             
           <div className="mb-8 text-center">
-            <h1 className="text-2xl font-bold text-gray-800">Book a Workspace</h1>
+            <div className="flex items-center justify-between">
+    <h1 className="ml-55 text-2xl font-bold text-gray-800">
+        Book a Workspace
+    </h1>
+
+    <X className="cursor-pointer hover:text-red-500" onClick={() => navigate(-1)} size={30} />
+</div>
             <p className="text-gray-600 font-italic">Select the features you need for your workspace.</p>
           </div>
           <form className="space-y-6">

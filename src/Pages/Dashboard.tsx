@@ -1,5 +1,5 @@
 
-import { Building2, CheckCircle2, CalendarClock, Bell, MoveUpRight, Sparkles, CircleUserRound, X } from "lucide-react";
+import { Building2, CheckCircle2, CalendarClock, MoveUpRight, Sparkles } from "lucide-react";
 import UseFetch from "../Hooks/UseFetch";
 import { useState } from "react";
 import Loading from '../assets/Loading.gif'
@@ -7,8 +7,7 @@ function Dashboard() {
 
   const { data, error, loading } = UseFetch("http://localhost:3000/Meeting");
   const [VisibleCount, setVisibleCount] = useState(3);
-  const [showBooking, setShowBooking] = useState(false);
-  const [SidebarOpen, setSidebarOpen] = useState(false);
+ 
   interface Meeting {
     id: number;
     title: string;
