@@ -14,7 +14,7 @@ const {setLoggedin}=useContext(UserContext)!;
   setLoggedin(true);
   
   localStorage.setItem("Loggedin", JSON.stringify(true));
-    navigate("/dashboard");
+    navigate("/");
 
   }
 

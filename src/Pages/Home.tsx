@@ -6,7 +6,7 @@ import Card2 from '../assets/card2.jpg'
 import Card3 from '../assets/card3.jpg'
 function Home() {
   const navigate = useNavigate();
-
+ const loggedValue:string|null=localStorage.getItem("Loggedin");
   return (
 
     <>
@@ -26,13 +26,14 @@ function Home() {
             </p>
           
             <div className="flex gap-4 pt-3">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 hover:scale-105 cursor-pointer transition" onClick={()=>{navigate("/BookWorkspace")}}>
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 hover:scale-105 cursor-pointer transition" onClick={()=>{loggedValue==="true"? navigate("/BookWorkspace"):navigate("/Login") }}>
                 Book a Workspace
               </button>
 
               <button className="border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-100 hover:scale-105 cursor-pointer transition" onClick={()=>console.log("clicked!")}>
                 Explore Rooms
               </button>
+
             </div>
 
             <div className="flex gap-8 pt-8">
@@ -68,7 +69,7 @@ function Home() {
             <img
               src={HomeImage}
               alt="Modern Meeting Room"
-              className="relative w-full h-[520px] object-cover rounded-3xl shadow-xl"
+              className="relative w-full h-[520px] object-cover rounded-3xl shadow-xl hover:scale-105 transition duration 300"
             />
           </div>
         </div>
