@@ -1,10 +1,15 @@
 import { X } from "lucide-react";
 import {useNavigate} from "react-router-dom";
+
+
 function BookWorkspace()
 {
+    
 const today = new Date().toISOString().split("T")[0];
 const now = new Date();
 const navigate = useNavigate();
+
+   
 const currentTime = now.toTimeString().slice(0,5);
 return(
     <>

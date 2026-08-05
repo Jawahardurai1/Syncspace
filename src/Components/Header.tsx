@@ -1,15 +1,26 @@
 
 import {  Bell, CircleUserRound, X } from "lucide-react";
-import { useState } from "react";
-
+import { useContext, useState } from "react";
+import { UserContext } from "../Context/Context";
 import { useNavigate } from "react-router-dom";
 
 function Header()
 {
   const navigate = useNavigate();
  
-  
+  const {isLoggedin}=useContext(UserContext)!;
   const [SidebarOpen, setSidebarOpen] = useState<boolean>(false);
+  function HandleLoggedinCheck()
+  {
+    if(isLoggedin)
+    {
+      navigate("/BookWorkspace");
+    }
+    else{
+
+      navigate("/login");
+    }
+  }
 return(
     <>
      <div className=" sticky top-0 z-50 flex h-[72px] w-full items-center bg-blue-500">
@@ -20,9 +31,13 @@ return(
           </div>
 
           <div className="ml-auto mr-10 flex items-center gap-8">
-            <Bell size={24} className="text-white cursor-pointer hover:scale-105 transition-all duration 300" />
-            <button className="bg-[#3B82F6] text-white px-5 py-2 rounded-lg font-medium bg-blue-600 hover:scale-105 transition-all duration 300 hover:bg-blue-700 cursor-pointer"onClick={() => navigate("/BookWorkspace")}>Book Workspace</button>
-            <CircleUserRound size={30} onClick={() => setSidebarOpen(!SidebarOpen)} className="text-white cursor-pointer hover:scale-105 transition-all duration 300" />
+            {isLoggedin && <Bell size={24} className="text-white cursor-pointer hover:scale-105 transition-all duration 300" />}
+
+
+            <button className="bg-[#3B82F6] text-white px-5 py-2 rounded-lg font-medium bg-blue-600 hover:scale-105 transition-all duration 300 hover:bg-blue-700 cursor-pointer"onClick={HandleLoggedinCheck}>Book Workspace</button>
+
+
+            {isLoggedin && <CircleUserRound size={30} onClick={() => setSidebarOpen(!SidebarOpen)} className="text-white cursor-pointer hover:scale-105 transition-all duration 300" />}
           </div>
         
           {SidebarOpen && (

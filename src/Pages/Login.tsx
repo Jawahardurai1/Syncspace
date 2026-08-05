@@ -1,20 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import BgImage from "../assets/LoginBg.png";
 import {useNavigate} from "react-router-dom";
+import { UserContext } from "../Context/Context";
+
 function Login() {
+
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
-
+const {setLoggedin}=useContext(UserContext)!;
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
-    console.log({
-      email,
-      password,
-    });
-
-    // Navigate to the dashboard after successful login
+  setLoggedin(true);
+  
+  localStorage.setItem("Loggedin", JSON.stringify(true));
     navigate("/dashboard");
 
   }
