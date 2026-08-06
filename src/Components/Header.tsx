@@ -1,5 +1,5 @@
 
-import {  Bell, CircleUserRound, X } from "lucide-react";
+import {  Bell, CircleUserRound, LogOut, X } from "lucide-react";
 import { useContext, useState } from "react";
 import { UserContext } from "../Context/Context";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ function Header()
 {
   const navigate = useNavigate();
  
-  const {isLoggedin}=useContext(UserContext)!;
+  const {isLoggedin,setLoggedin}=useContext(UserContext)!;
   const [SidebarOpen, setSidebarOpen] = useState<boolean>(false);
   function HandleLoggedinCheck()
   {
@@ -20,6 +20,13 @@ function Header()
 
       navigate("/login");
     }
+  }
+  function LogOut()
+  {
+    localStorage.removeItem("Loggedin");
+     setLoggedin(false);
+     setSidebarOpen(false);
+    navigate("/");
   }
 return(
     <>
@@ -75,19 +82,12 @@ return(
                   Contact
                 </h3>
 
-                <h3 className="px-4 py-3 rounded-lg text-slate-700 font-medium cursor-pointer 
-                 hover:bg-blue-50 hover:text-blue-600 transition">
-                  Help
-                </h3>
 
-                <h3 className="px-4 py-3 rounded-lg text-slate-700 font-medium cursor-pointer 
-                 hover:bg-blue-50 hover:text-blue-600 transition">
-                  Settings
-                </h3>
+                
 
 
                 <h3 className="mt-4 px-4 py-3 rounded-lg text-red-500 font-medium cursor-pointer
-                 hover:bg-red-50 transition">
+                 hover:bg-red-50 transition" onClick={()=>LogOut()}>
                   Logout
                 </h3>
 

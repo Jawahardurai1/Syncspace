@@ -92,6 +92,12 @@ const {setLoggedin}=useContext(UserContext)!;
             >
               Sign In
             </button>
+            <div className="mt-4 text-center text-sm text-gray-500">
+              Don't have an account?{" "}
+              <a href="#" className="font-semibold text-blue-600 hover:text-blue-700">
+                Sign up
+              </a>
+            </div>
           </form>
         </div>
       </div>

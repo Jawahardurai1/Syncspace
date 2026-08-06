@@ -7,6 +7,7 @@ import Card3 from '../assets/card3.jpg'
 function Home() {
   const navigate = useNavigate();
  const loggedValue:string|null=localStorage.getItem("Loggedin");
+ 
   return (
 
     <>
