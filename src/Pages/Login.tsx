@@ -2,13 +2,14 @@ import { useContext, useState } from "react";
 import BgImage from "../assets/LoginBg.png";
 import {useNavigate} from "react-router-dom";
 import { UserContext } from "../Context/Context";
+import Signup from "./Signup";
 
 function Login() {
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
-const {setLoggedin}=useContext(UserContext)!;
+const {setLoggedin,signup,setSignup}=useContext(UserContext)!;
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
   setLoggedin(true);
@@ -33,7 +34,7 @@ const {setLoggedin}=useContext(UserContext)!;
 
 
       <div className="flex w-1/2 items-center justify-center bg-gray-100">
-        <div className="w-full max-w-md rounded-2xl bg-white p-10 shadow-2xl">
+         {!signup ? (<div className="w-full max-w-md rounded-2xl bg-white p-10 shadow-2xl">
 
           <div className="mb-8 text-center">
             <h1 className="text-4xl font-bold tracking-tight text-slate-900">
@@ -94,12 +95,12 @@ const {setLoggedin}=useContext(UserContext)!;
             </button>
             <div className="mt-4 text-center text-sm text-gray-500">
               Don't have an account?{" "}
-              <a href="#" className="font-semibold text-blue-600 hover:text-blue-700">
+              <a href="#" className="font-semibold text-blue-600 hover:text-blue-700" onClick={()=>{setSignup((prev)=>!prev)}}>
                 Sign up
               </a>
             </div>
           </form>
-        </div>
+        </div>):(<Signup/>)}
       </div>
     </div>
 

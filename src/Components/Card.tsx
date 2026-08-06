@@ -1,8 +1,6 @@
 
 
   type Cardcontent={
-       
-        
         description:string,
         image:string
     }

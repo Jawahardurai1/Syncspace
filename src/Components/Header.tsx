@@ -8,7 +8,7 @@ function Header()
 {
   const navigate = useNavigate();
  
-  const {isLoggedin,setLoggedin}=useContext(UserContext)!;
+  const {isLoggedin,setLoggedin,username}=useContext(UserContext)!;
   const [SidebarOpen, setSidebarOpen] = useState<boolean>(false);
   function HandleLoggedinCheck()
   {
@@ -42,9 +42,20 @@ return(
 
 
             <button className="bg-[#3B82F6] text-white px-5 py-2 rounded-lg font-medium bg-blue-600 hover:scale-105 transition-all duration 300 hover:bg-blue-700 cursor-pointer"onClick={HandleLoggedinCheck}>Book Workspace</button>
-
-
-            {isLoggedin && <CircleUserRound size={30} onClick={() => setSidebarOpen(!SidebarOpen)} className="text-white cursor-pointer hover:scale-105 transition-all duration 300" />}
+            {isLoggedin && (
+                  <div
+                    onClick={() => setSidebarOpen(!SidebarOpen)}
+                    className="flex items-center gap-3 cursor-pointer"
+                  >
+                    <CircleUserRound
+                      size={30}
+                      className="text-white hover:scale-105 transition-transform duration-300"
+                    />
+                    <h2 className="text-white text-md font-medium hover:text-blue-200 transition-colors">
+                      {username}
+                    </h2>
+                  </div>
+)}
           </div>
         
           {SidebarOpen && (

@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import BookWorkspace from "../Pages/BookWorkspace";
 import MainLayout from "../Layout/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
+import Signup from "../Pages/Signup";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
             path:"Login",
             element:<Login/>
+            },
+            {
+                path:"Signup",
+                element:<Signup/>
             }
         ]
     }

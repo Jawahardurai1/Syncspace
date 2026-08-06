@@ -6,7 +6,7 @@ import Card2 from '../assets/card2.jpg'
 import Card3 from '../assets/card3.jpg'
 function Home() {
   const navigate = useNavigate();
- const loggedValue:string|null=localStorage.getItem("Loggedin");
+ const loggedValue=localStorage.getItem("Loggedin")!;
  
   return (
 
