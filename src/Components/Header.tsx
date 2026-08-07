@@ -42,6 +42,7 @@ return(
 
 
             <button className="bg-[#3B82F6] text-white px-5 py-2 rounded-lg font-medium bg-blue-600 hover:scale-105 transition-all duration 300 hover:bg-blue-700 cursor-pointer"onClick={HandleLoggedinCheck}>Book Workspace</button>
+             {!isLoggedin && <button className="bg-[#3B82F6] text-white px-5 py-2 rounded-lg font-medium bg-blue-600 hover:scale-105 transition-all duration 300 hover:bg-blue-700 cursor-pointer" onClick={()=> {navigate("/login")}}>Sign In</button>}
             {isLoggedin && (
                   <div
                     onClick={() => setSidebarOpen(!SidebarOpen)}

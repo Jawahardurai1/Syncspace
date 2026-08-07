@@ -5,6 +5,7 @@ import Card from "../Components/Card";
 import Card1 from '../assets/card1.jpg'
 import Card2 from '../assets/card2.jpg'
 import Card3 from '../assets/card3.jpg'
+import Footer from "../Components/Footer";
 function Home() {
   const navigate = useNavigate();
  const loggedValue=localStorage.getItem("Loggedin")!;
@@ -164,7 +165,7 @@ window.scrollTo(
                   </div>
                 </div>
         </div>
-        <div className=" flex flex-col mb-34 ">
+        <div className=" flex flex-col ">
           <h4 className="font-bold text-4xl text-center">Want to Explore All types of the Workspaces </h4>
          <div className="flex ">
           <button className="mt-8 font-medium text-white bg-blue-500 rounded-lg px-6 py-2 max-w-[200px]  cursor-pointer  hover:scale-105 transition duration 300 ml-175 text-md" onClick={()=>{loggedValue==="true"? navigate("/ExploreRooms"):navigate("/Login") }}>Explore now</button>
@@ -172,7 +173,7 @@ window.scrollTo(
           </div>
             
         </div>
-{/*next for the footer hereeeeeeeeeeeee*/}
+        <Footer/>
 
       </div>
 

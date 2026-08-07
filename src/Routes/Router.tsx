@@ -6,6 +6,7 @@ import BookWorkspace from "../Pages/BookWorkspace";
 import MainLayout from "../Layout/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
 import Signup from "../Pages/Signup";
+import Footer from '../Components/Footer';
 import ExploreRooms from "../Pages/ExploreRooms";
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path:"Explorerooms",
                 element:<ExploreRooms/>
+            },
+            {
+                path:"footer",
+                element:<Footer/>
             }
         ]
     }
