@@ -1,7 +1,7 @@
 
 
   type Cardcontent={
-        description:string,
+        description?:string,
         image:string
     }
 function Card({description,image}:Cardcontent)
