@@ -93,11 +93,6 @@ return(
                  hover:bg-blue-50 hover:text-blue-600 transition">
                   Contact
                 </h3>
-
-
-                
-
-
                 <h3 className="mt-4 px-4 py-3 rounded-lg text-red-500 font-medium cursor-pointer
                  hover:bg-red-50 transition" onClick={()=>LogOut()}>
                   Logout
