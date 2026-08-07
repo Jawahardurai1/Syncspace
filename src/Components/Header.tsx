@@ -1,5 +1,5 @@
 
-import {  Bell, CircleUserRound, LogOut, X } from "lucide-react";
+import {  Bell, CircleUserRound, X } from "lucide-react";
 import { useContext, useState } from "react";
 import { UserContext } from "../Context/Context";
 import { useNavigate } from "react-router-dom";

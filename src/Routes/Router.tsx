@@ -6,6 +6,7 @@ import BookWorkspace from "../Pages/BookWorkspace";
 import MainLayout from "../Layout/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
 import Signup from "../Pages/Signup";
+import ExploreRooms from "../Pages/ExploreRooms";
 const router = createBrowserRouter([
     {
         path: "/",
